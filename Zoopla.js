@@ -43,3 +43,5 @@ class ZooplaClient {
     return parsed_listings
   }
 }
+
+module.exports = ZooplaClient
