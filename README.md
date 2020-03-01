@@ -1,5 +1,6 @@
-# maps_api
-Playing around with google maps
+# Rent Easy
+
+A tool for ranking property rentals based on proximity to points of interest.
 
 clone this repo <br>
 run `npm install`
