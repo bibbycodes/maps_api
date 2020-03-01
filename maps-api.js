@@ -22,6 +22,3 @@ class DirectionsClient {
     return timeSecs
   }
 }
-
-let directions = new DirectionsClient()
-let travelTime = directions.travelTime("London", "Manchester").then(res => console.log(res))
