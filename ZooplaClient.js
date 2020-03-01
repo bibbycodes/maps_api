@@ -15,7 +15,7 @@ class ZooplaClient {
       &page_size=100
       &postcode=${postcode}
       &area=${area}
-      propertyType=${propertyType}
+      &propertyType=${propertyType}
       &maximum_price=${maxPrice}
       &minimum_price=${minPrice}
     `)
@@ -25,7 +25,6 @@ class ZooplaClient {
     let parser = new xml2js.Parser();
     parser.parseString(data, (err, result) => {
       listings = result.response.listing
-      console.log(listings.length)
     })
 
     let parsed_listings = []
@@ -39,7 +38,6 @@ class ZooplaClient {
       }
       parsed_listings.push(obj)
     }
-    
     return parsed_listings
   }
 }
