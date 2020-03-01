@@ -1,6 +1,6 @@
 # Rent Easy
 
-A tool for ranking property rentals based on proximity to points of interest.
+## A tool for ranking property rentals based on proximity to points of interest.
 
 clone this repo <br>
 run `npm install`
