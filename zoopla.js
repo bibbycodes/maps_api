@@ -23,7 +23,6 @@ class ZooplaClient {
     let data = res.data
     let listings
     let parser = new xml2js.Parser();
-
     parser.parseString(data, (err, result) => {
       listings = result.response.listing
       console.log(listings.length)
@@ -38,16 +37,9 @@ class ZooplaClient {
         long: listing.longitude,
         lat: listing.latitude
       }
-      
-      console.log(listing.price, listing.details_url[0], listing.longitude, listing.latitude)
       parsed_listings.push(obj)
     }
+    
     return parsed_listings
   }
 }
-
-client = new ZooplaClient()
-let listings
-client.propertyListings().then(res => {
-  listings = res
-})
