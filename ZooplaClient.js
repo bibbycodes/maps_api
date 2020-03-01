@@ -15,7 +15,7 @@ class ZooplaClient {
       &page_size=100
       &postcode=${postcode}
       &area=${area}
-      &propertyType=${propertyType}
+      &property_type=${propertyType}
       &maximum_price=${maxPrice}
       &minimum_price=${minPrice}
     `)
