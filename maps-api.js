@@ -8,7 +8,6 @@ class DirectionsClient {
   }
 
   async getDirections(origin, destination){
-    console.log(`${this.baseUrl}?origin=${origin}&destination=${destination}&key=${this.dirKey}`)
     let response = await axios.get(`${this.baseUrl}?origin=${origin}&destination=${destination}&key=${this.dirKey}`)
     return response.data
   }
