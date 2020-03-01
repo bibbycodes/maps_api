@@ -5,7 +5,7 @@
 clone this repo <br>
 run `npm install`
 
-<a href="https://developer.zoopla.co.uk/member/register">Sign up for a zoopla developer account and request an api key<a>
+<a href="https://developer.zoopla.co.uk/member/register">Sign up for a zoopla developer account and request an api key<a><br>
 <a href="https://developers.google.com/maps/documentation/directions/start">Sign up for a google directions api key<a>
 
 Make sure you have a .env file with the following contents
