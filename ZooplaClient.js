@@ -4,12 +4,13 @@ require('dotenv').config()
 
 class ZooplaClient {
   constructor() {
-    this.apiKey = process.env.ZOOPLA_KEY
+    this.apiKey = process.env.ZOOPLA_KEY_2
     this.baseUrl = "http://api.zoopla.co.uk/api/v1"
   }
 
-  async propertyListings(status, postcode, area, propertyType, maxPrice, minPrice) {
-    let res = await axios.get(`
+  async propertyListings(status, postcode, area, propertyType, minPrice, maxPrice) {
+    try {
+      let res = await axios.get(`
       ${this.baseUrl}/property_listings.xml?apiKey=${this.apiKey}
       &listing_status=${status}
       &page_size=100
@@ -39,6 +40,10 @@ class ZooplaClient {
       parsed_listings.push(obj)
     }
     return parsed_listings
+    }
+    catch (err) {
+      console.error(err)
+    }
   }
 }
 

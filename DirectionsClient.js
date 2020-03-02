@@ -16,8 +16,8 @@ class DirectionsClient {
     let directions = await this.getDirections(origin, destination)
     let routes = directions.routes
     let timeSecs = 0
-    for (let i = 0; i < routes[0].legs.length; i++) {
-      timeSecs += routes[0].legs[i].duration.value
+    for (let leg of routes[0].legs) {
+      timeSecs += leg.duration.value
     }
     return timeSecs
   }
